@@ -1,0 +1,11 @@
+body {
+  font-family: sans-serif;
+}
+
+p {
+  margin: 200px auto 0px auto;
+  text-align: center;
+  letter-spacing: -4px;
+  font-weight: bold;
+  font-size: 4em;
+}
