@@ -2,10 +2,22 @@ body {
   font-family: sans-serif;
 }
 
-p {
+h3, h1 {
   margin: 200px auto 0px auto;
   text-align: center;
   letter-spacing: -4px;
   font-weight: bold;
   font-size: 4em;
+}
+
+h1 {
+  color: #c9c9c9;
+}
+
+h3 {
+  margin-top: 10px;
+}
+
+#palmn {
+  float: right;
 }

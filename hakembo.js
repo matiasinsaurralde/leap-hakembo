@@ -16,8 +16,10 @@ $( document ).ready( function() {
 
     hand: function(hand){
 
-      palmVerticalThreshold = 0.4;
+      palmVerticalThreshold = 0.3;
       palmN = hand.palmNormal[0];
+
+      $('#palmn').text( palmN );
 
       if (palmN >= palmVerticalThreshold ) {
         setText('Playing...');
