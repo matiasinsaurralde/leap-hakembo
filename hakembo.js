@@ -20,7 +20,7 @@ $( document ).ready( function() {
       palmN = hand.palmNormal[0];
 
       if (palmN >= palmVerticalThreshold ) {
-        setText('Jugando...');
+        setText('Playing...');
 
       } else {
 
@@ -31,11 +31,11 @@ $( document ).ready( function() {
             littleFinger = hand.fingers[4];
 
         if( indexFinger.extended && middleFinger.extended && ringFinger.extended && littleFinger.extended ) {
-          setText('Papel');
+          setText('Paper');
         } else if (indexFinger.extended && middleFinger.extended && !ringFinger.extended ) {
-          setText('Tijera');
+          setText('Scissors');
         } else {
-          setText('Piedra');
+          setText('Rock');
         };
 
       };
