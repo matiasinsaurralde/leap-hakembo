@@ -26,17 +26,20 @@ $( document ).ready( function() {
 
       } else {
 
-        var thumbFinger = hand.fingers[0];
-            indexFinger = hand.fingers[1];
-            middleFinger = hand.fingers[2]
-            ringFinger = hand.fingers[3]
-            littleFinger = hand.fingers[4];
-
-        if( indexFinger.extended && middleFinger.extended && ringFinger.extended && littleFinger.extended ) {
+        var thumbFinger = hand.fingers[0],
+            indexFinger = hand.fingers[1],
+            middleFinger = hand.fingers[2],
+            ringFinger = hand.fingers[3],
+            littleFinger = hand.fingers[4],
+            fingerExtendedCount = 0;
+        for(i = 0; i < hand.fingers.length; i++) 
+          if(hand.fingers[i].extended) 
+            fingerExtendedCount++;
+        if(fingerExtendedCount > 3) { //We have to allow people missing a fingr play too! :D //indexFinger.extended && middleFinger.extended && ringFinger.extended && littleFinger.extended ) {
           setText('Paper');
-        } else if (indexFinger.extended && middleFinger.extended && !ringFinger.extended ) {
+        } else if (indexFinger.extended && (middleFinger.extended || !ringFinger.extended) ) { //Scissors have two blades, not three xD
           setText('Scissors');
-        } else {
+        } else { // We can use \,,/, Malocchio sign, because...ROCK! xD
           setText('Rock');
         };
 
